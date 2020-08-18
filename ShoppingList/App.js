@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Header from './components/Header.js';
-import { uuid } from 'uuidv4';
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 
 const App = () => {
   const [items, setItems] = useState([
-    {id: uuid(), text: 'Milk'},
-    {id: uuid(), text: 'Eggs'},
-    {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Juice'},
+    {id: uuidv4(), text: 'Milk'},
+    {id: uuidv4(), text: 'Eggs'},
+    {id: uuidv4(), text: 'Bread'},
+    {id: uuidv4(), text: 'Juice'},
   ])
   return (
     <View style={styles.container}>
